@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+   
+</head>
+<body>
+    
+     
+<div class="container">
+    
+    <form action="#" onsubmit="onsubmit(event)" >
+        <label style="text-align:center;" for="" text-color:blue>  <b style="text-align:center;">Name</b></label>
+          <input type="text" name="username" required/>
+        <br> <hr>
+          <label style="color:rgb(161, 161, 222)" for="">Email</label>
+          <input type="email" name="email" required />
+          <br> <hr>
+          <label  for="">Password</label>
+          <input type="password" name="password" required/>
+          <br>
+          <hr>
+          <div class="vertical-center1">
+            <input type="submit" value="SignUp">
+            </div>
+         
+    
+          <label for=""><p><a href="index3.html">Already a customer?</a></p></label>
+         
+          <br> <hr>
+         
+        
+         
+        
+        <label for="Date">Date for Calling </label>
+        <br>
+         <input type="datetime-local" name="date" required />
+          </form>
+        <script>
+          function onsubmit(event)
+          {
+            event.preventDefault();
+            console.log(event.target.username.value);
+          }
+        </script>
+           <br>
+    <div class="vertical-center">
+      <button style="background-color:orange;"><a style="color:rgb(0, 0, 0)"  href="index4.html">Get a Call</a></a></button>
+    </div>
+  </div>
+  
+    
+</body>
+</html>
