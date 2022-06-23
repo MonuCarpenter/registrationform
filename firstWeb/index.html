@@ -52,6 +52,18 @@
             localStorage.setItem('Mail', email);
             localStorage.setItem('Password', password);
           }
+             let myobj = {
+            name : 'Monu',
+            age: 56,
+
+          };
+          let myobj_serialized = JSON.stringify(myobj);
+          localStorage.setItem('myobj', myobj_serialized);
+          console.log(myobj_serialized);
+          let myobj_deserialized = JSON.parse(localStorage.getItem('myobj'));
+          console.log(myobj_deserialized);
+          
+
         </script>
            <br>
     <div class="vertical-center">
