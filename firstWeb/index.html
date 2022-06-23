@@ -45,7 +45,12 @@
           function onsubmit(event)
           {
             event.preventDefault();
-            console.log(event.target.username.value);
+           const name = event.target.username.value;
+            const email = event.target.email.value;
+            const password = event.target.password.value;
+            localStorage.setItem('Name', name);
+            localStorage.setItem('Mail', email);
+            localStorage.setItem('Password', password);
           }
         </script>
            <br>
