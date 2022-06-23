@@ -41,30 +41,35 @@
         <br>
          <input type="datetime-local" name="date" required />
           </form>
-        <script>
-          function onsubmit(event)
+       <script>
+          function saveToLocalStorage(event)
           {
             event.preventDefault();
-           const name = event.target.username.value;
+            const name = event.target.username.value;
             const email = event.target.email.value;
-            const password = event.target.password.value;
+            const password = event.target.password.value; 
+   
             localStorage.setItem('Name', name);
             localStorage.setItem('Mail', email);
-            localStorage.setItem('Password', password);
+            localStorage.setItem('Passeword', password);
+     
+            const obj =
+            {
+              name,
+              email,
+              password,
+              
+            }
+              showNewUserOnScreen(obj);
+            
+          } 
+          function showNewUserOnScreen(user)
+          {
+            const parentNode = document.getElementById('listOfUsers');
+            const childHTML = `<li> ${user.name} - ${user.email} - ${user.password} -</li>`;
+            parentNode.innerHTML = parentNode.innerHTML + childHTML;
           }
-             let myobj = {
-            name : 'Monu',
-            age: 56,
-
-          };
-          let myobj_serialized = JSON.stringify(myobj);
-          localStorage.setItem('myobj', myobj_serialized);
-          console.log(myobj_serialized);
-          let myobj_deserialized = JSON.parse(localStorage.getItem('myobj'));
-          console.log(myobj_deserialized);
-          
-
-        </script>
+           </script>
            <br>
     <div class="vertical-center">
       <button style="background-color:orange;"><a style="color:rgb(0, 0, 0)"  href="index4.html">Get a Call</a></a></button>
